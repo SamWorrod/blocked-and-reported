@@ -48,8 +48,6 @@ function App() {
           </div>
           
           <LineChart
-            width={800}
-            height={500}
             series={[
               { data: generateTiers(), label: 'Current Tier' },
             ]}
