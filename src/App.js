@@ -42,8 +42,8 @@ function App() {
         </Box>
       </header>
       <div className='body'>
-        <Box sx={{height: '60vh', width: '80vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', color: 'black', boxShadow: '1px 1px 1px grey', margin: '15vh 5vh 0vh 5vh', border: '2px solid grey' }}>
-          <div style={{ width: '80vh', display: 'flex', flexDirection: 'row', justifyContent: 'center',}}>
+        <Box sx={{height: '60vh', width: '90vw', display: 'flex', flexDirection: 'column', justifyContent: 'center', color: 'black', boxShadow: '1px 1px 1px grey', margin: '15vh 5vw 0vh 5vw', border: '2px solid grey' }}>
+          <div style={{ width: '90vw', display: 'flex', flexDirection: 'row', justifyContent: 'center',}}>
             Weekly Tier
           </div>
           
