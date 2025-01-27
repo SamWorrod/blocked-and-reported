@@ -363,6 +363,58 @@ const data = [
       }
     ]
   },
+  {
+    week: 15,
+    tier: 7,
+    games: [
+      {
+        opponent: 'Go Sportsball!',
+        teamScore: 25,
+        opponentScore: 19
+      },
+      {
+        opponent: 'Go Sportsball!',
+        teamScore: 25,
+        opponentScore: 21
+      },
+      {
+        opponent: 'My Dumps',
+        teamScore: 25,
+        opponentScore: 23
+      },
+      {
+        opponent: 'My Dumps',
+        teamScore: 15,
+        opponentScore: 25
+      }
+    ]
+  },
+  {
+    week: 16,
+    tier: 6,
+    games: [
+      {
+        opponent: 'Capital ACE',
+        teamScore: 0,
+        opponentScore: 0
+      },
+      {
+        opponent: 'Capital ACE',
+        teamScore: 0,
+        opponentScore: 0
+      },
+      {
+        opponent: 'Believe That',
+        teamScore: 0,
+        opponentScore: 0
+      },
+      {
+        opponent: 'Believe That',
+        teamScore: 0,
+        opponentScore: 0
+      }
+    ]
+  },
 
   
 ]
