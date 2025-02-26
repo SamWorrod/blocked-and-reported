@@ -27,9 +27,9 @@ export default function Card(props) {
             <NameWrapper>
                 {info.name}
             </NameWrapper>
-            {info.games.map((game) => {
+            {info.games.map((game, index) => {
                 const wonGame = game.teamScore > game.opponentScore
-                return (<GameWrapper style={{ color: 'white', backgroundColor: wonGame ? 'green' : 'red'}}>
+                return (<GameWrapper key={info.name + ' game:' + index.toString()}style={{ color: 'white', backgroundColor: wonGame ? 'green' : 'red'}}>
                     {game.teamScore}:{game.opponentScore} - Tier: {game.tier}
                 </GameWrapper>
                 )

@@ -74,8 +74,8 @@ function App() {
           </Box>)
 
           : (<Box sx={{height: '70vh', width: '90vw', display: 'flex', flexWrap: 'wrap', flexDirection: 'row', color: 'black',  margin: '5vh 5vw 0vh 5vw'}}>
-            {cardInfo.map((card) => (
-                <Card info={card}/>
+            {cardInfo.map((card, index) => (
+                <Card key={'card' + index.toString()}info={card}/>
             ))}
           </Box>)
 

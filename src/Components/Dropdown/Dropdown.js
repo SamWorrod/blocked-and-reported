@@ -20,8 +20,8 @@ export default function Dropdown( props) {
     }
     return (
         <DropdownField onChange={handleSelect}>
-            {options.map((option) => (
-                <Option value={option.value}>{option.label}</Option>
+            {options.map((option, index) => (
+                <Option key={'option ' + index.toString()}value={option.value}>{option.label}</Option>
             ))}
         </DropdownField>
     )
