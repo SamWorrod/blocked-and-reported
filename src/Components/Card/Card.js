@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const CardWrapper = styled.div`
-    min-width: 10vw;
+    min-width: 15vw;
     height: 20vh;
     margin: 5px;
     border-radius: 10px;
@@ -20,51 +20,6 @@ const GameWrapper = styled.div`
 
 export default function Card(props) {
     const info = props.info
-    const testTeam = {
-        "name": "Sext-Men",
-        "games": [
-            {
-                "teamScore": 11,
-                "opponentScore": 25,
-                "tier": 10
-            },
-            {
-                "teamScore": 20,
-                "opponentScore": 25,
-                "tier": 10
-            },
-            {
-                "teamScore": 27,
-                "opponentScore": 26,
-                "tier": 9
-            },
-            {
-                "teamScore": 25,
-                "opponentScore": 19,
-                "tier": 9
-            },
-            {
-                "teamScore": 25,
-                "opponentScore": 21,
-                "tier": 8
-            },
-            {
-                "teamScore": 25,
-                "opponentScore": 12,
-                "tier": 8
-            },
-            {
-                "teamScore": 25,
-                "opponentScore": 16,
-                "tier": 8
-            },
-            {
-                "teamScore": 23,
-                "opponentScore": 25,
-                "tier": 8
-            }
-        ]
-    }
     return (
         <CardWrapper>
             <NameWrapper>

@@ -36,6 +36,5 @@ export const getTeamAndGames = (data) => {
             
         })
     })
-    debugger
     return teams
 }

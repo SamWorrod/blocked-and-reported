@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import styled from 'styled-components'
 
 const DropdownField = styled.select`
@@ -16,7 +15,6 @@ const Option = styled.option`
 export default function Dropdown( props) {
     const options = props.options
     const onSelect = props.onSelect
-    const [value, setValue ] = useState()
     const handleSelect = (event) => {
         onSelect && onSelect(event.target.value)
     }
