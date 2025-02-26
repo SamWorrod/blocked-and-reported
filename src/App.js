@@ -59,7 +59,7 @@ function App() {
         <Dropdown options={options} onSelect={(value) => {setScreen(value)}}></Dropdown>
         {
           screen === 'chart' 
-          ? (<Box sx={{height: '60vh', width: '90vw', display: 'flex', flexDirection: 'column', justifyContent: 'center', color: 'black', boxShadow: '1px 1px 1px grey', margin: '15vh 5vw 0vh 5vw', border: '2px solid grey', borderRadius: '5rem' }}>
+          ? (<Box sx={{height: '60vh', width: '90vw', display: 'flex', flexDirection: 'column', justifyContent: 'center', color: 'black', boxShadow: '1px 1px 1px grey', margin: '5vh 5vw 0vh 5vw', border: '2px solid grey', borderRadius: '5rem' }}>
             <div style={{ width: '90vw', display: 'flex', flexDirection: 'row', justifyContent: 'center',}}>
               Weekly Tier
             </div>
@@ -73,7 +73,7 @@ function App() {
             />
           </Box>)
 
-          : (<Box sx={{height: '70vh', width: '90vw', display: 'flex', flexWrap: 'wrap', flexDirection: 'row', color: 'black',  margin: '15vh 5vw 0vh 5vw'}}>
+          : (<Box sx={{height: '70vh', width: '90vw', display: 'flex', flexWrap: 'wrap', flexDirection: 'row', color: 'black',  margin: '5vh 5vw 0vh 5vw'}}>
             {cardInfo.map((card) => (
                 <Card info={card}/>
             ))}
