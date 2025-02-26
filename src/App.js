@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import './App.css';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -7,7 +8,6 @@ import { LineChart } from '@mui/x-charts/LineChart';
 import data from './data.js'
 import Card from './Components/Card/Card.js'
 import Dropdown from './Components/Dropdown/Dropdown.js'
-import { useState } from 'react';
 import { getTeamAndGames } from './Utils/AppUtils.js';
 
 
@@ -26,6 +26,8 @@ const generateLabels = () => {
   })
   return weeks
 }
+
+
 function App() {
   const [screen, setScreen] = useState('chart') 
   const options = [
