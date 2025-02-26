@@ -1,14 +1,16 @@
 import styled from 'styled-components'
 
 const CardWrapper = styled.div`
-    min-width: 15vw;
+    min-width: 40vw;
     height: 20vh;
     margin: 5px;
     border-radius: 10px;
     border: 2px solid black;
     overflow: scroll;
+    background-color: #d9d7d7;
 `
 const NameWrapper = styled.div`
+    background-color: white;
     border-bottom: 2px solid black;
 `
 const GameWrapper = styled.div`
