@@ -7,7 +7,6 @@ const CardWrapper = styled.div`
     border-radius: 10px;
     border: 2px solid black;
     overflow: scroll;
-    background-color: #d9d7d7;
 `
 const NameWrapper = styled.div`
     background-color: white;
@@ -29,7 +28,7 @@ export default function Card(props) {
             </NameWrapper>
             {info.games.map((game, index) => {
                 const wonGame = game.teamScore > game.opponentScore
-                return (<GameWrapper key={info.name + ' game:' + index.toString()}style={{ color: 'white', backgroundColor: wonGame ? 'green' : 'red'}}>
+                return (<GameWrapper key={info.name + ' game:' + index.toString()}style={{ color: 'white', backgroundColor: wonGame ? '#2C6E49' : '#9B2D20'}}>
                     {game.teamScore}:{game.opponentScore} - Tier: {game.tier}
                 </GameWrapper>
                 )
