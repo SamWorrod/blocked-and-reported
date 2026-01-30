@@ -83,7 +83,7 @@ function App() {
               series={[
                 { data: generateTiers(year), label: 'Current Tier' },
               ]}
-              yAxis={[{min: 16, max: 1, label: 'Tier'}]}
+              yAxis={[{min: year === '24/25' ? 16 : 17, max: 1, label: 'Tier'}]}
               xAxis={[{ scaleType: 'point', data: generateLabels(year), label: 'Week' }]}
             />
           </Box>)
