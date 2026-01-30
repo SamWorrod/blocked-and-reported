@@ -11,7 +11,7 @@ const CardWrapper = styled.div`
 const NameWrapper = styled.div`
     background-color: white;
     border-bottom: 2px solid black;
-    height: 4vh;
+    height: fit-content;
 `
 const GameWrapper = styled.div`
     font-size: 0.75em;
