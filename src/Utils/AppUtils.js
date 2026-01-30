@@ -7,9 +7,10 @@
 * }
 */
 
-export const getTeamAndGames = (data) => {
+export const getTeamAndGames = (data, year) => {
     let teams = []
-    data.forEach((week) => {
+    let yearData = data[year]
+    yearData.forEach((week) => {
         let tier = week.tier
         week.games.forEach((game) => {
             let opponent = game.opponent

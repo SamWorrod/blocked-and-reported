@@ -11,17 +11,19 @@ import Dropdown from './Components/Dropdown/Dropdown.js'
 import { getTeamAndGames } from './Utils/AppUtils.js';
 
 
-const generateTiers = () => {
+const generateTiers = (year) => {
   let tiers = []
-  data.forEach((week) => {
+  let yearData = data[year]
+  yearData.forEach((week) => {
     tiers.push(week.tier)
   })
   return tiers
 }
 
-const generateLabels = () => {
+const generateLabels = (year) => {
   let weeks = []
-  data.forEach((week) => {
+  let yearData = data[year]
+  yearData.forEach((week) => {
     weeks.push('Week ' + week.week.toString())
   })
   return weeks
@@ -29,7 +31,19 @@ const generateLabels = () => {
 
 
 function App() {
-  const [screen, setScreen] = useState('chart') 
+  const [screen, setScreen] = useState('chart')
+  const [year, setYear] = useState('25/26')
+  const yearOptions = [
+    {
+      value: '25/26',
+      label: '25/26'
+    },
+    {
+      value: '24/25',
+      label: '24/25'
+    },
+    
+  ]
   const options = [
     {
       value: 'chart',
@@ -40,7 +54,7 @@ function App() {
       label: 'Team Breakdown'
     }
   ]
-  let cardInfo = getTeamAndGames(data)
+  let cardInfo = getTeamAndGames(data, year)
   return (
     <div className="App">
       <header className="App-header">
@@ -57,6 +71,7 @@ function App() {
       <div className='body'>
         <>
         <Dropdown options={options} onSelect={(value) => {setScreen(value)}}></Dropdown>
+        <Dropdown options={yearOptions} onSelect={(value) => {setYear(value)}}></Dropdown>
         {
           screen === 'chart' 
           ? (<Box sx={{height: '60vh', width: '90vw', display: 'flex', flexDirection: 'column', justifyContent: 'center', color: 'black', boxShadow: '1px 1px 1px grey', margin: '5vh 5vw 0vh 5vw', border: '2px solid grey', borderRadius: '5rem' }}>
@@ -66,10 +81,10 @@ function App() {
             
             <LineChart
               series={[
-                { data: generateTiers(), label: 'Current Tier' },
+                { data: generateTiers(year), label: 'Current Tier' },
               ]}
               yAxis={[{min: 16, max: 1, label: 'Tier'}]}
-              xAxis={[{ scaleType: 'point', data: generateLabels(), label: 'Week' }]}
+              xAxis={[{ scaleType: 'point', data: generateLabels(year), label: 'Week' }]}
             />
           </Box>)
 
